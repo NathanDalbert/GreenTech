@@ -1,5 +1,6 @@
-//INICIALIZAÇÃO DO F7 QUANDO DISPOSITIVO ESTÁ PRONTO
+// INICIALIZAÇÃO DO F7 QUANDO DISPOSITIVO ESTÁ PRONTO
 document.addEventListener('deviceready', onDeviceReady, false);
+
 var app = new Framework7({
   // App root element
   el: '#app',
@@ -21,67 +22,85 @@ var app = new Framework7({
       path: '/index/',
       url: 'index.html',
       animate: false,
-	  on: {
-		pageBeforeIn: function (event, page) {
-		// fazer algo antes da página ser exibida
-		},
-		pageAfterIn: function (event, page) {
-		// fazer algo depois da página ser exibida
-		},
-		pageInit: function (event, page) {
-		// fazer algo quando a página for inicializada
-		},
-		pageBeforeRemove: function (event, page) {
-		// fazer algo antes da página ser removida do DOM
-		},
-	  }
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
     },
     {
       path: '/link2/',
       url: 'link2.html',
       animate: false,
-	  on: {
-		pageBeforeIn: function (event, page) {
-		// fazer algo antes da página ser exibida
-		},
-		pageAfterIn: function (event, page) {
-		// fazer algo depois da página ser exibida
-		},
-		pageInit: function (event, page) {
-		// fazer algo quando a página for inicializada
-		},
-		pageBeforeRemove: function (event, page) {
-		// fazer algo antes da página ser removida do DOM
-		},
-	  }
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
     },
     {
       path: '/link3/',
       url: 'link3.html',
       animate: false,
-	  on: {
-		pageBeforeIn: function (event, page) {
-		// fazer algo antes da página ser exibida
-		},
-		pageAfterIn: function (event, page) {
-		// fazer algo depois da página ser exibida
-		},
-		pageInit: function (event, page) {
-		// fazer algo quando a página for inicializada
-		},
-		pageBeforeRemove: function (event, page) {
-		// fazer algo antes da página ser removida do DOM
-		},
-	  }
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
     },
+    {
+      path: '/link4/',
+      url: 'link4.html',
+      animate: false,
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
+    }
   ],
-  // ... other parameters
 });
 
-//Para testes direto no navegador
+// Para testes direto no navegador
 var mainView = app.views.create('.view-main', { url: '/index/' });
 
-//EVENTO PARA SABER O ITEM DO MENU ATUAL
+// EVENTO PARA SABER O ITEM DO MENU ATUAL
 app.on('routeChange', function (route) {
   var currentRoute = route.url;
   console.log(currentRoute);
@@ -94,23 +113,20 @@ app.on('routeChange', function (route) {
   }
 });
 
-
 function onDeviceReady() {
-  //Quando estiver rodando no celular
+  // Quando estiver rodando no celular
   var mainView = app.views.create('.view-main', { url: '/index/' });
 
-  //COMANDO PARA "OUVIR" O BOTAO VOLTAR NATIVO DO ANDROID 	
+  // COMANDO PARA "OUVIR" O BOTÃO VOLTAR NATIVO DO ANDROID
   document.addEventListener("backbutton", function (e) {
-
     if (mainView.router.currentRoute.path === '/index/') {
       e.preventDefault();
       app.dialog.confirm('Deseja sair do aplicativo?', function () {
-        navigator.app.exitApp();
+        navigator.app.exitApp(); // Fechar o app no Android
       });
     } else {
       e.preventDefault();
-      mainView.router.back({ force: true });
+      mainView.router.back({ force: true }); // Voltar para a página anterior
     }
   }, false);
-
 }
