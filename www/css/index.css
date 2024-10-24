@@ -1,6 +1,7 @@
 :root{
     --branco: #fff;
-    --gelo: #f1f1f1;
+    --gelo: #e0e0e0
+;
     --verde: #19c463;
     --preto:#2a2a2a;
 }
@@ -77,3 +78,61 @@ body{
     font-size: 24px;
     color: var(--preto);
 }
+
+.btn-cart::before{
+    content: attr(data-count);
+    background: var(--verde);
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--branco);
+    position:absolute;
+    top: 5px;
+    right: 0px;
+    margin-right: 5%;
+
+}
+.btn-cart[data-count="0"]::before{
+   display: none;
+}
+
+a{
+    color: var(--verde);
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+form{
+    padding-top: 10px;
+    background-color: var(--branco);
+    padding-bottom: 20px;
+    position: relative;
+}
+input[type="text"]{
+    width: 90%;
+    background: var(--gelo);
+    height: 45px;
+    border-radius: 10px;
+    padding: 10px 20 px; 
+    margin: auto;
+}
+
+::placeholder{
+    color: #b3afaf;
+  
+}
+
+.icone-busca{
+    position: absolute;
+    top: 14px;
+    right: 7%;
+    font-size: 27px;
+    padding: 1px;
+    
+}
+
