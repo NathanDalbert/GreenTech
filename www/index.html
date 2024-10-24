@@ -57,9 +57,9 @@
             <div data-name="index" class="page color-theme-blue">
 
                 <!-- NAV TOPO-->
-            <div class="top-nav">
+                <div class="top-nav">
                     <h1 class="title-logo"><span>Green</span>Tech</h1>
-                    <a href="" class="btn-cart" data-count = "2">
+                    <a href="" class="btn-cart" data-count="2">
                         <i class="ri-shopping-bag-line"></i>
                     </a>
                 </div>
@@ -68,34 +68,35 @@
                     <input placeholder="O que você procura?" type="text">
                     <i class="icone-busca ri-search-2-line"></i>
                 </form>
-                    
+
 
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block no-margin-top">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                <img  class="img-fluid" src="img/propaganda.png"></div>
-                              <div class="swiper-slide"><img class="img-fluid" src="img/propaganda2.png" ></div>
-                              <div class="swiper-slide"><img  class="img-fluid" src="img/propaganda3.png" ></div>
-                              <div class="swiper-slide"><img  class="img-fluid" src="img/propaganda4.png" ></div>
-                              
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/propaganda.png">
+                                </div>
+                                <div class="swiper-slide"><img class="img-fluid" src="img/propaganda2.png"></div>
+                                <div class="swiper-slide"><img class="img-fluid" src="img/propaganda3.png"></div>
+                                <div class="swiper-slide"><img class="img-fluid" src="img/propaganda4.png"></div>
+
                             </div>
                             <div class="swiper-pagination"></div>
-                          </div>
-                          <div class="display-flex align-items-center justify-content-space-between">
+                        </div>
+                        <div class="display-flex align-items-center justify-content-space-between">
                             <h2>Categorias</h2>
                             <a href="" class="btn btn-categoria">Ver todas <i class="mdi mdi-arrow-right"></i></a>
                         </div>
-                        
+
                         <!-- Swiper -->
-                            <div class="swiper categorias">
-                                <div class="swiper-wrapper">
+                        <div class="swiper categorias">
+                            <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <button class="filter-btn active">todas</button>
                                 </div>
-                                
+
                                 <div class="swiper-slide">
                                     <button class="filter-btn">Celulares</button>
                                 </div>
@@ -156,13 +157,88 @@
                                 <div class="swiper-slide">
                                     <button class="filter-btn">Decoração</button>
                                 </div>
-                                
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
 
-                        
-                        
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <div id="Produtos" class="margin-top row display-flex align-items-center justify-content-center">
+
+                            <!--ITEM CARD-->
+                            <div class="item-card">
+                                <a href="#" class="item">
+                                    <div class="img-container">
+                                        <img src="img/xbox.png" alt="Xbox">
+                                    </div>
+                                    <div class="nome-rating">
+                                        <span class="color-gray">Xbox series X</span>
+                                        <span class="bold margin-right">
+                                            <i class="mdi mdi-star"></i>
+                                            4.8
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="preco">
+                                    <span>R$ 10.000,00</span>
+                                </div>
+                            </div>
+                            <!--ITEM CARD-->
+                            <div class="item-card">
+                                <a href="#" class="item">
+                                    <div class="img-container">
+                                        <img src="img/airpod.png" alt="Airpods">
+                                    </div>
+                                    <div class="nome-rating">
+                                        <span class="color-gray">Airpods</span>
+                                        <span class="bold margin-right">
+                                            <i class="mdi mdi-star"></i>
+                                            4.8
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="preco">
+                                    <span>R$ 1.000,00</span>
+                                </div>
+                            </div>
+                            <!--ITEM CARD-->
+                            <div class="item-card">
+                                <a href="#" class="item">
+                                    <div class="img-container">
+                                        <img src="img/xbox.png" alt="Xbox">
+                                    </div>
+                                    <div class="nome-rating">
+                                        <span class="color-gray">Nome item:</span>
+                                        <span class="bold margin-right">
+                                            <i class="mdi mdi-star"></i>
+                                            4.8
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="preco bold">
+                                    <span>R$ 1.000,00</span>
+                                </div>
+                            </div>
+                            <!--ITEM CARD-->
+                            <div class="item-card">
+                                <a href="#" class="item">
+                                    <div class="img-container">
+                                        <img src="img/iphone.png" alt="Xbox">
+                                    </div>
+                                    <div class="nome-rating">
+                                        <span class="color-gray">Nome item:</span>
+                                        <span class="bold margin-right">
+                                            <i class="mdi mdi-star"></i>
+                                            4.8
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="preco bold">
+                                    <span>R$ 1.000,00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
                     </div>
                 </div>
             </div>
@@ -170,13 +246,9 @@
     </div>
     <!-- Path to Framework7 Library Bundle JS-->
     <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
-	<!-- jQuery -->
-	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
     <!-- Roteamento do app-->
     <script type="text/javascript" src="js/routes.js"></script>
     <script src="cordova.js"></script>
 </body>
-
-</html><div class="swiper-slide">
-                                    <button class="filter-btn">Celulares</button>
-                                </div>
